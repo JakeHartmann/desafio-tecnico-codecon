@@ -2,6 +2,8 @@ Minha tentativa de fazer [esse desafio](https://github.com/codecon-dev/desafio-1
 
 Demorou definitivamente mais do que a 1 hora estipulada, já que foi meu maior contato com JSON até o momento e aprendi bastante sobre algumas peculiaridades do Flask. Acho que é um baita recurso pra ser implementado em outras linguagens e ver como elas funcionam, quem sabe tento fazer com um Gin ou um Ktor.
 
+---
+
 ## Performance dos endpoints de acordo com a rota `GET "/evaluation"`
 Tempo em ms da média aritmética de 5 requisições feitas utilizando o [Bruno](https://github.com/usebruno/bruno) na mesma máquina rodando o servidor local
 
