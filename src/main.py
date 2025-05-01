@@ -35,12 +35,12 @@ def superusers():
         "superusers": superusers_data,
     }
 
-    return jjsonify(response)
+    return response
 
 @app.route("/top-countries")
 @with_execution_time
-def get_top_countries():
-    top_countries = defaultdict(int)
+def top_countries():
+    top_countries = {}
     for superuser in get_superusers():
         top_countries[superuser.pais] = top_countries.get(superuser.pais, 0) + 1
     top_5_countries = sorted(top_countries.items(), key=lambda pair: pair[1], reverse=True)[:5]
@@ -49,7 +49,7 @@ def get_top_countries():
         "countries": { top_5_countries[i][0] : top_5_countries[i][1] for i in range(len(top_5_countries)) }
     }
     
-    return jjsonify(response)
+    return response
 
 @app.route("/team-insights")
 @with_execution_time
@@ -105,7 +105,7 @@ def team_insights():
         "teams": teams_response
     }
     
-    return jjsonify(response)
+    return response
 
 @app.route("/active-users-per-day")
 @with_execution_time
